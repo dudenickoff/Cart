@@ -6,9 +6,9 @@ export default class Products extends React.Component {
 			this.state = {
 					cardNumber: '',
 					expirationDate: '',
-					cvv: '123',
+					cvv: '',
 					saveCard: false,
-					email: 'a@a.com'
+					email: ''
 			}
 		this.handleInputChange = this.handleInputChange.bind(this);
 		this.submitCard = this.submitCard.bind(this);
