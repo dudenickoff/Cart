@@ -7,7 +7,6 @@ import products from '../products'
 class Products extends React.Component {
   renderProducts(products) {
     const { addToCart } = this.props;
-    // console.log(addToCart);
     return products.map(data => {
       const { product_id } = data;
       return (

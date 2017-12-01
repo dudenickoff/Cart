@@ -39,7 +39,6 @@ export default class Products extends React.Component {
     	});
   	}
   	submitCard(){
-  		console.log("before clean", this.state);
   		this.setState({
   			cardNumber: '',
 			expirationDate: '',
