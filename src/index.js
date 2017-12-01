@@ -7,7 +7,6 @@ import logger from 'redux-logger'
 import App from './components/app'
 import rootReducer from './reducers'
 
-// const logger = createLogger({})
 const store = createStore(rootReducer, applyMiddleware(logger))
 
 const mount = document.getElementById('app')
