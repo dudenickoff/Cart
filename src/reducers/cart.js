@@ -12,7 +12,7 @@ export default function cart(state = [], action) {
     return [action.payload.data, ...state]
 
     case ACTIONS.REMOVE_FROM_CART:
-      return state.filter(prod => prod.product_id !== action.payload.dataproduct_id);
+      return state.filter(prod => prod.product_id !== action.payload.data.product_id);
 
     case ACTIONS.INCREASE_QUANTITY:
       return state.map((val, item) => { 
