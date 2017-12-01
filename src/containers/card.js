@@ -15,7 +15,7 @@ export default class Products extends React.Component {
 	}
 	cardNumberFromatter(value) {
   		var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
-  		var matches = v.match(/\d{4,16}/g);
+  		var matches = v.match(/\d{0,16}/g);
   		var match = matches && matches[0] || ''
   		var parts = []
   			for (let i=0, len=match.length; i<len; i+=4) {
@@ -24,18 +24,17 @@ export default class Products extends React.Component {
   			if (parts.length) {
     			return parts.join(' ')
   			} else {
-    			return value
+    			return v
   			  }
 	}
     handleInputChange(event) {
     const target = event.target;
     let value = target.type === 'checkbox' ? target.checked : target.value;
-    const name = target.name;
     	if(target.name == 'cardNumber'){
-    		value = this.cardNumberFromatter(value);
+        value = this.cardNumberFromatter(value);
     	}
     	this.setState({
-      		[name]: value
+      		[target.name]: value
     	});
   	}
   	submitCard(){
@@ -73,14 +72,13 @@ export default class Products extends React.Component {
     				onChange={this.handleInputChange} 
     				maxLength={3} 
     			/>
-    			<label htmlFor='saveCard'>Save Card?
-    			<input 
-    				type='checkbox'
-    				name='saveCard'
-    				id='saveCard'
-    				checked={this.state.saveCard}
-    				onChange={this.handleInputChange} 
-    			></input>
+          <input 
+            type='checkbox'
+            name='saveCard'
+            id='saveCard'
+            checked={this.state.saveCard}
+            onChange={this.handleInputChange} 
+          /><label htmlFor='saveCard'>Save Card?</label>
     			<input
     				type='email' 
     				name='email'
@@ -88,7 +86,7 @@ export default class Products extends React.Component {
     				placeholder='Please type your email'
     				value={this.state.email}
     				onChange={this.handleInputChange} 
-    			/></label>
+    			/>
     			<button onClick={this.submitCard}>Submit</button>
     		</div>
     	)
