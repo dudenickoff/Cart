@@ -13,7 +13,7 @@ export default class Products extends React.Component {
 		this.handleInputChange = this.handleInputChange.bind(this);
 		this.submitCard = this.submitCard.bind(this);
 	}
-	cc_format(value) {
+	cardNumberFromatter(value) {
   		var v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
   		var matches = v.match(/\d{4,16}/g);
   		var match = matches && matches[0] || ''
@@ -32,7 +32,7 @@ export default class Products extends React.Component {
     let value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
     	if(target.name == 'cardNumber'){
-    		value = this.cc_format(value);
+    		value = this.cardNumberFromatter(value);
     	}
     	this.setState({
       		[name]: value

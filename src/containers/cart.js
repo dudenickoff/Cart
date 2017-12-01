@@ -2,7 +2,6 @@ import React from 'react'
 import { createStore } from 'redux'
 import { createCart } from 'react-redux-shopping-cart'
 import { connect } from 'react-redux'
-import { cartReducer } from 'react-redux-shopping-cart'
 import CartItem from '../components/cart-item'
 import products from '../products'
 
