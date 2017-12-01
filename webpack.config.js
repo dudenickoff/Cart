@@ -56,6 +56,7 @@ module.exports = {
   			},
   	devServer: {
   		port: 3000,
-  		stats: "errors-only"
+  		stats: "errors-only",
+      https: true
   	}
 }
