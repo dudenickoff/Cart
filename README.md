@@ -1,5 +1,5 @@
 # Cart
-##### Download node.js from [Node.js](https://nodejs.org/dist/v8.9.2/node-v8.9.2-x64.msi)
+##### Download node.js from [Node.js(Windows)](https://nodejs.org/dist/v8.9.2/node-v8.9.2-x64.msi) or [Node.js(Mac)](https://nodejs.org/dist/v8.9.2/node-v8.9.2.pkg)
 ##### Open console
 ##### Choose the directory
 ##### Type "git clone https://github.com/smile54/Cart.git"
