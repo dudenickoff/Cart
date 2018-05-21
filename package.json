@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "server": "static build",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "start_secure": "webpack-dev-server --https"
   },
   "repository": {
     "type": "git",
